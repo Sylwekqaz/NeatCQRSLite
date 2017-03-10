@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandBus.cs" />
+    <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\ValidationError.cs" />
     <Compile Include="Commands\CommandResult.cs" />
     <Compile Include="Commands\ICommand.cs" />
