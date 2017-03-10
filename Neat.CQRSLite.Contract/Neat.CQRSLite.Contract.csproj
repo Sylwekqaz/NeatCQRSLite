@@ -47,6 +47,7 @@
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\ICommandValidator.cs" />
     <Compile Include="Domain\IAggregate.cs" />
+    <Compile Include="Domain\IAggregateRoot.cs" />
     <Compile Include="Events\IEvent.cs" />
     <Compile Include="Events\IEventBus.cs" />
     <Compile Include="Events\IEventHandler.cs" />
