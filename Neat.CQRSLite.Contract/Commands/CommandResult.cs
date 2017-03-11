@@ -8,7 +8,7 @@ namespace Neat.CQRSLite.Contract.Commands
     {
         private CommandResult(IEnumerable<ValidationError> validationErrors)
         {
-            ValidationErrors = new List<ValidationError>(validationErrors);
+            ValidationErrors = validationErrors == null ? new List<ValidationError>() : new List<ValidationError>(validationErrors);
         }
 
         public IReadOnlyList<ValidationError> ValidationErrors { get; }

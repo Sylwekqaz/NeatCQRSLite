@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neat.CQRSLite.Contract", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neat.CQRSLite.CQRS", "Neat.CQRSLite.CQRS\Neat.CQRSLite.CQRS.csproj", "{AEE676FF-2BAE-405B-92A9-9CE7B217B1B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5FC35E40-4625-4671-99C7-75A6DA5F1E81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neat.CQRSLite.CQRS.Tests", "Neat.CQRSLite.CQRS.Tests\Neat.CQRSLite.CQRS.Tests.csproj", "{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{AEE676FF-2BAE-405B-92A9-9CE7B217B1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE676FF-2BAE-405B-92A9-9CE7B217B1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE676FF-2BAE-405B-92A9-9CE7B217B1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21} = {5FC35E40-4625-4671-99C7-75A6DA5F1E81}
 	EndGlobalSection
 EndGlobal
