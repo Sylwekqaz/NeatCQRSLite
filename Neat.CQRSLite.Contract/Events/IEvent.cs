@@ -2,12 +2,8 @@
 
 namespace Neat.CQRSLite.Contract.Events
 {
-    public interface IEvent : IEvent<Guid>
+    //marker
+    public interface IEvent
     {
-    }
-
-    public interface IEvent<out TKey>
-    {
-        TKey EventId { get; }
     }
 }
