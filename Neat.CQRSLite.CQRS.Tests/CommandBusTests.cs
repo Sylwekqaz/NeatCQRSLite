@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Neat.CQRSLite.Contract.Commands;
 using NSubstitute;
 using Xunit;
@@ -38,6 +39,50 @@ namespace Neat.CQRSLite.CQRS.Tests
             Assert.Equal(commandResult.ValidationErrors[0], validationsErrors[0]);
             commandValidator.Received(1).Validate(Arg.Any<ICommand>());
             commandHandler.DidNotReceive().Execute(Arg.Any<ICommand>());
+        }
+
+        [Fact]
+        public void TypeCheck()
+        {
+            var command = new TestComand();
+            var commandValidator = new TestComandValidator();
+            var commandHandler = new TestComandHandler();
+            var requestedComandHandlerType = typeof(void);
+            var requestedComandValidatorType = typeof(void);
+            var commandBus = new CommandBus(t =>
+            {
+                requestedComandValidatorType = t;
+                return commandValidator;
+            }, t =>
+            {
+                requestedComandHandlerType = t;
+                return commandHandler;
+            });
+
+            commandBus.Execute(command);
+
+            Assert.Equal(typeof(ICommandHandler<TestComand>), requestedComandHandlerType);
+            Assert.Equal(typeof(ICommandValidator<TestComand>), requestedComandValidatorType);
+        }
+
+        public class TestComand : ICommand
+        {
+        }
+
+        public class TestComandHandler : ICommandHandler<TestComand>
+        {
+            public void Execute(TestComand command)
+            {
+                //do nothing
+            }
+        }
+
+        public class TestComandValidator : ICommandValidator<TestComand>
+        {
+            public IEnumerable<ValidationError> Validate(TestComand command)
+            {
+                return new ValidationError[0];
+            }
         }
     }
 }
