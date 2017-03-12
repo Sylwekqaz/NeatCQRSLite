@@ -11,15 +11,16 @@ namespace Neat.CQRSLite.Contract.Commands
             AttemptedValue = attemptedValue;
         }
 
-        public string PropertyName { get;  }
-        public string ErrorMessage { get;  }
-        public object AttemptedValue { get;  }
+        public string PropertyName { get; }
+        public string ErrorMessage { get; }
+        public object AttemptedValue { get; }
 
         public bool Equals(ValidationError other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return string.Equals(PropertyName, other.PropertyName) && string.Equals(ErrorMessage, other.ErrorMessage) && Equals(AttemptedValue, other.AttemptedValue);
+            return string.Equals(PropertyName, other.PropertyName) && string.Equals(ErrorMessage, other.ErrorMessage) &&
+                   Equals(AttemptedValue, other.AttemptedValue);
         }
 
         public override bool Equals(object obj)

@@ -12,7 +12,7 @@ namespace Neat.CQRSLite.CQRS.Tests
         public void HappyPath()
         {
             var query = Substitute.For<IQuery<string>>();
-            var queryPerformer = Substitute.For<IQueryPerformer<IQuery<string>,string>>();
+            var queryPerformer = Substitute.For<IQueryPerformer<IQuery<string>, string>>();
             queryPerformer.Perform(query).Returns("Succes");
             var queryBus = new QueryBus(t => queryPerformer);
 
@@ -41,10 +41,9 @@ namespace Neat.CQRSLite.CQRS.Tests
 
         public class TestQuery : IQuery<string>
         {
-            
         }
 
-        public class TestQueryPerformer : IQueryPerformer<TestQuery,string>
+        public class TestQueryPerformer : IQueryPerformer<TestQuery, string>
         {
             private string _returnValue;
 
