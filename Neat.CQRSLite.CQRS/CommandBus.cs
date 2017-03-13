@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Neat.CQRSLite.Contract.Commands;
 
@@ -23,12 +22,12 @@ namespace Neat.CQRSLite.CQRS
             if (commandValidator != null)
             {
                 var validationErrors =
-                    (IEnumerable<ValidationError>) ((dynamic) commandValidator).Validate((dynamic) command);
+                    ((ICommandValidator<TCommand>) commandValidator).Validate(command);
                 if (validationErrors.Any())
                     return CommandResult.NotValid(validationErrors);
             }
             var commandHandler = _commandHandlerResolver(typeof(ICommandHandler<TCommand>));
-            ((dynamic) commandHandler).Execute((dynamic) command);
+            ((ICommandHandler<TCommand>) commandHandler).Execute(command);
             return CommandResult.Success();
         }
     }

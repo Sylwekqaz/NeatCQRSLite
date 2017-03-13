@@ -18,7 +18,7 @@ namespace Neat.CQRSLite.CQRS
             var handlers = _eventHandlersResolver(typeof(IEventHandler<TEvent>));
             foreach (var eventHandler in handlers)
             {
-                ((dynamic) eventHandler).Handle((dynamic) @event);
+                ((IEventHandler<TEvent>) eventHandler).Handle((dynamic) @event);
             }
         }
     }
