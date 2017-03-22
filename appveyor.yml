@@ -1,0 +1,34 @@
+version: '{build}' #ignore versioning from appveyor
+
+#develop branch configuration
+branches:
+  only:
+  - develop
+image: Visual Studio 2017
+configuration: Debug
+before_build:
+- cmd: nuget restore
+build:
+  verbosity: minimal
+artifacts:
+- path: src\Neat.CQRSLite.Contract.Nuget\bin\Debug\Neat.CQRSLite.Contract.*.nupkg
+  name: Nuget Package
+- path: src\Neat.CQRSLite.CQRS.Nuget\bin\Debug\Neat.CQRSLite.CQRS.*.nupkg
+  name: Nuget Package
+
+
+#master branch configuration
+branches:
+  only:
+  - develop
+image: Visual Studio 2017
+configuration: Release
+before_build:
+- cmd: nuget restore
+build:
+  verbosity: minimal
+artifacts:
+- path: src\Neat.CQRSLite.Contract.Nuget\bin\Release\Neat.CQRSLite.Contract.*.nupkg
+  name: Nuget Package
+- path: src\Neat.CQRSLite.CQRS.Nuget\bin\Release\Neat.CQRSLite.CQRS.*.nupkg
+  name: Nuget Package
