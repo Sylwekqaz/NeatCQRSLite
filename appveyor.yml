@@ -1,6 +1,6 @@
 #develop branch configuration
 -
-  version: '0.1.{build}-dev' #ignore versioning from appveyor
+  version: '0.1.{build}'
   image: Visual Studio 2017
   before_build:
   - cmd: nuget restore
@@ -9,6 +9,12 @@
   branches:
     only:
     - develop
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}-dev'
   configuration: Debug
   artifacts:
   - path: src\Neat.CQRSLite.Contract.Nuget\bin\Debug\Neat.CQRSLite.Contract.*.nupkg
@@ -27,6 +33,13 @@
   branches:
     only:
     - master
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}-beta'
+
   configuration: Release
   artifacts:
   - path: src\Neat.CQRSLite.Contract.Nuget\bin\Debug\Neat.CQRSLite.Contract.*.nupkg
