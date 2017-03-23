@@ -6,6 +6,9 @@
   - cmd: nuget restore
   build:
     verbosity: minimal
+	publish_nuget: true
+    publish_nuget_symbols: true
+
   branches:
     only:
     - develop
@@ -16,11 +19,6 @@
     assembly_file_version: '{version}'
     assembly_informational_version: '{version}-dev'
   configuration: Debug
-  artifacts:
-  - path: src\Neat.CQRSLite.Contract.Nuget\bin\Debug\Neat.CQRSLite.Contract.*.nupkg
-    name: Nuget Package
-  - path: src\Neat.CQRSLite.CQRS.Nuget\bin\Debug\Neat.CQRSLite.CQRS.*.nupkg
-    name: Nuget Package
 
 #master branch configuration
 -
@@ -30,6 +28,8 @@
   - cmd: nuget restore
   build:
     verbosity: minimal
+	publish_nuget: true
+    publish_nuget_symbols: true
   branches:
     only:
     - master
