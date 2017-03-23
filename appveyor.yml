@@ -24,7 +24,7 @@
 
 #master branch configuration
 -
-  version: '0.1.{build}-beta' #ignore versioning from appveyor
+  version: '0.1.{build}'
   image: Visual Studio 2017
   before_build:
   - cmd: nuget restore
