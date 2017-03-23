@@ -16,7 +16,7 @@
     file: '**\AssemblyInfo.*'
     assembly_version: '{version}'
     assembly_file_version: '{version}'
-    assembly_informational_version: '{version}-dev'
+    assembly_informational_version: '{version}-alpha'
   configuration: Debug
 
 #master branch configuration
