@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CQRSLite - Contract")]
-[assembly: AssemblyDescription("NeatCQRSLite is simple CQRS (command query responsibility segregation) framework. This peoject contain implementaton of CQRS basic bus definied in contract project")]
+[assembly: AssemblyDescription("NeatCQRSLite is simple CQRS (command query responsibility segregation) framework. This project is contract, contains basic interfaes and classes without implementation.")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
 #else
@@ -41,4 +41,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("0.0.1")]
 [assembly: AssemblyFileVersion("0.0.1")]
 [assembly: AssemblyInformationalVersion("0.0.1-local-build")]
-
