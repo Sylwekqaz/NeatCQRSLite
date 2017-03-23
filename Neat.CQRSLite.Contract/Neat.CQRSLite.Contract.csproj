@@ -60,6 +60,7 @@
     <Compile Include="Queries\IQueryPerformer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Neat.CQRSLite.Contract.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
