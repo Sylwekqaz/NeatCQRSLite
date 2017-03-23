@@ -11,12 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5FC35E40
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neat.CQRSLite.CQRS.Tests", "Neat.CQRSLite.CQRS.Tests\Neat.CQRSLite.CQRS.Tests.csproj", "{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{6376C90E-970C-4A5C-B91E-A9589DED8B53}"
-EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Neat.CQRSLite.Contract.Nuget", "src\Neat.CQRSLite.Contract.Nuget\Neat.CQRSLite.Contract.Nuget.nuproj", "{ED5FBD72-54F6-43A2-860E-48A67566501B}"
-EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Neat.CQRSLite.CQRS.Nuget", "src\Neat.CQRSLite.CQRS.Nuget\Neat.CQRSLite.CQRS.Nuget.nuproj", "{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7FDEADFE-7B4B-4D24-8C52-2ED2F1542FBD}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
@@ -40,21 +34,11 @@ Global
 		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED5FBD72-54F6-43A2-860E-48A67566501B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED5FBD72-54F6-43A2-860E-48A67566501B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED5FBD72-54F6-43A2-860E-48A67566501B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED5FBD72-54F6-43A2-860E-48A67566501B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21} = {5FC35E40-4625-4671-99C7-75A6DA5F1E81}
-		{ED5FBD72-54F6-43A2-860E-48A67566501B} = {6376C90E-970C-4A5C-B91E-A9589DED8B53}
-		{34DEB845-64A8-4AED-B3E5-CF4D6C3CAC98} = {6376C90E-970C-4A5C-B91E-A9589DED8B53}
 	EndGlobalSection
 EndGlobal
