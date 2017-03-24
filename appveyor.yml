@@ -1,6 +1,6 @@
 #develop branch configuration
 -
-  version: '0.1.{build}'
+  version: '0.1.{build}-alpha'
   image: Visual Studio 2017
   before_build:
   - cmd: nuget restore
@@ -14,14 +14,14 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '{version}'
-    assembly_file_version: '{version}'
-    assembly_informational_version: '{version}-alpha'
+    assembly_version: '0.1.{build}'
+    assembly_file_version: '0.1.{build}'
+    assembly_informational_version: '{version}'
   configuration: Debug
 
 #master branch configuration
 -
-  version: '0.1.{build}'
+  version: '0.1.{build}-beta'
   image: Visual Studio 2017
   before_build:
   - cmd: nuget restore
@@ -35,9 +35,9 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '{version}'
-    assembly_file_version: '{version}'
-    assembly_informational_version: '{version}-beta'
+    assembly_version: '0.1.{build}'
+    assembly_file_version: '0.1.{build}'
+    assembly_informational_version: '{version}'
 
   configuration: Release
   artifacts:
