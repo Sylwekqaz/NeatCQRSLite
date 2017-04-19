@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{4B60
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleAspMVCApp", "Example\ExampleAspMVCApp\ExampleAspMVCApp\ExampleAspMVCApp.csproj", "{58D415F8-09FF-4774-978A-E16F1D2A4133}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleBackEndLogic", "ExampleBackEndLogic\ExampleBackEndLogic.csproj", "{3097648C-0942-44A7-AFC9-D5DC64B108A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{58D415F8-09FF-4774-978A-E16F1D2A4133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D415F8-09FF-4774-978A-E16F1D2A4133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D415F8-09FF-4774-978A-E16F1D2A4133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3097648C-0942-44A7-AFC9-D5DC64B108A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3097648C-0942-44A7-AFC9-D5DC64B108A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3097648C-0942-44A7-AFC9-D5DC64B108A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3097648C-0942-44A7-AFC9-D5DC64B108A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E89AC5A6-43E0-4DE8-AB5C-8E9EBD271A21} = {5FC35E40-4625-4671-99C7-75A6DA5F1E81}
 		{58D415F8-09FF-4774-978A-E16F1D2A4133} = {4B609FB1-0D9A-450F-95BE-AE24E8B2A7E4}
+		{3097648C-0942-44A7-AFC9-D5DC64B108A4} = {4B609FB1-0D9A-450F-95BE-AE24E8B2A7E4}
 	EndGlobalSection
 EndGlobal
