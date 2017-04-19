@@ -18,6 +18,14 @@
     assembly_file_version: '0.1.{build}'
     assembly_informational_version: '{version}'
   configuration: Debug
+  deploy:
+    provider: NuGet
+    # empty server: to push to NuGet.org
+    api_key:
+      secure: jl3WOrWorSRN4TGAiTXHTOKcejnYpO7akTQXKfT6BxqpGLrGb9p4ecu12g1C8iCO
+    skip_symbols: false
+    # empty symbol_server: to push symbols to SymbolSource.org
+    artifact: /.*\.nupkg/
 
 #master branch configuration
 -
@@ -38,10 +46,12 @@
     assembly_version: '0.1.{build}'
     assembly_file_version: '0.1.{build}'
     assembly_informational_version: '{version}'
-
   configuration: Release
-  artifacts:
-  - path: src\Neat.CQRSLite.Contract.Nuget\bin\Debug\Neat.CQRSLite.Contract.*.nupkg
-    name: Nuget Package
-  - path: src\Neat.CQRSLite.CQRS.Nuget\bin\Debug\Neat.CQRSLite.CQRS.*.nupkg
-    name: Nuget Package
+  deploy:
+    provider: NuGet
+    # empty server: to push to NuGet.org
+    api_key:
+      secure: jl3WOrWorSRN4TGAiTXHTOKcejnYpO7akTQXKfT6BxqpGLrGb9p4ecu12g1C8iCO
+    skip_symbols: false
+    # empty symbol_server: to push symbols to SymbolSource.org
+    artifact: /.*\.nupkg/
