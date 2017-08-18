@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("CQRSLite - CQRS")]
-[assembly: AssemblyDescription("NeatCQRSLite is simple CQRS (command query responsibility segregation) framework. This peoject contain implementaton of CQRS basic bus definied in contract project")]
+[assembly: AssemblyDescription("NeatCQRSLite is simple CQRS (command query responsibility segregation) framework. This project contains implementaton of CQRS basic bus definied in contract project.")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
 #else
